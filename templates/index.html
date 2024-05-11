@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Vino en mi ciudad - Inicio</title>
+</head>
+<body class="inicio">
+
+    <h1 class="titulo">Bienvenidos a Vino en tu ciudad!</h1>
+
+    <section class="botones"> 
+        <article>
+            <button class="boton-1" onclick="window.location.href='/register'">Registrarse</button>
+        </article>
+        <article >
+            <button class="boton-2" onclick="window.location.href='/login'" >Iniciar sesión</button>
+        </article>
+    </section>
+
+    <section class="tabla">
+        <table>
+            <thead>
+                <tr>
+                    <td>Nombre</td>
+                    <td>Telefono</td>
+                    <td>Mail</td>
+                    <td>Accion</td>
+                </tr>
+            </thead>
+            <tbody>
+                {%for usuario in usuarios%}
+                    <tr>
+                        <td>{{usuario.1}}</td>
+                        <td>{{usuario.2}}</td>
+                        <td>{{usuario.3}}</td>
+                        <td><a href="/delete/{{usuario.0}}">Eliminar</a></td>
+                    </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    </section>
+
+</body>
+</html>
