@@ -9,49 +9,5 @@
 <body class="body-login">
     <h1>INICIO DE SESION</h1>
 
-    <!-- <table>
-        <thead>
-            <tr>
-                <td>Nombre</td>
-                <td>Telefono</td>
-                <td>Mail</td>
-                <td>Accion</td>
-            </tr>
-        </thead>
-
-        <tbody>
-            {%for usuario in usuarios%}
-                <tr>
-                    <td>{{usuario.1}}</td>
-                    <td>{{usuario.2}}</td>
-                    <td>{{usuario.3}}</td>
-                    <td><a href="/delete/{{usuario.0}}">Eliminar</a></td>
-                </tr>
-            {%endfor%}
-        </tbody>
-    </table> -->
-
-    <table>
-        <thead>
-            <tr>
-                <th scope="col">Nombre</th>
-                <th scope="col">Telefono</th>
-                <th scope="col">Mail</th>
-                <th scope="col">Acción</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for usuario in usuarios %}
-                <tr>
-                    <td>{{ usuario.1 }}</td>
-                    <td>{{ usuario.2 }}</td>
-                    <td>{{ usuario.3 }}</td>
-                    <td><a href="/delete/{{ usuario.0 }}">Eliminar</a></td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    
-
 </body>
 </html>
